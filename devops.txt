@@ -1,0 +1,73 @@
+https://jeevan.jeromeabel.com/
+
+test@gmail.com
+123456
+
+npm install
+
+npm run dev
+
+npm run build 
+
+npm start
+
+
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+BASEPATH=
+
+
+pm2 start npm --watch pages --name "Lawchat" -- start -- -p 3000
+
+
+npm install pm2@latest -g
+
+--------------------------------------------------------
+Ngnix
+
+sudo apt install nginx -y
+
+sudo nano /etc/nginx/sites-available/myapp
+
+
+server {
+    listen 80;
+    server_name your_domain_or_ip;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+
+
+sudo ln -s /etc/nginx/sites-available/myapp /etc/nginx/sites-enabled/
+
+
+sudo nginx -t
+
+
+sudo /opt/bitnami/ctlscript.sh stop apache
+
+
+sudo systemctl restart nginx
+
+
+--------------------------------------------
+SSL
+
+sudo apt install certbot python3-certbot-nginx -y
+
+
+sudo certbot --nginx
+
+
+godwinjeevan2k3@gmail.com
+
+www.jeevan.jeromeabel.com
+
+sudo systemctl status certbot.timer
+
