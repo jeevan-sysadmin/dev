@@ -21,6 +21,9 @@ pm2 start npm --watch pages --name "Lawchat" -- start -- -p 3000
 
 npm install pm2@latest -g
 
+https://www.figma.com/design/zS5UWJ3DDyIp1L2nVDpaFV/Palm-beach-Emails?node-id=0-105&t=sebnyoJTpESv8oZS-0
+
+
 --------------------------------------------------------
 Ngnix
 
